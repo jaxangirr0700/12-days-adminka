@@ -1,0 +1,409 @@
+(globalThis.TURBOPACK = globalThis.TURBOPACK || []).push(["static/chunks/src_6e1f3490._.js", {
+
+"[project]/src/utils/number.ts [app-client] (ecmascript)": ((__turbopack_context__) => {
+"use strict";
+
+var { g: global, __dirname, k: __turbopack_refresh__, m: module } = __turbopack_context__;
+{
+__turbopack_context__.s({
+    "getRandomID": (()=>getRandomID)
+});
+function getRandomID() {
+    return Math.floor(Math.random() * 100000);
+}
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(module, globalThis.$RefreshHelpers$);
+}
+}}),
+"[project]/src/store/my-store.ts [app-client] (ecmascript)": ((__turbopack_context__) => {
+"use strict";
+
+var { g: global, __dirname, k: __turbopack_refresh__, m: module } = __turbopack_context__;
+{
+__turbopack_context__.s({
+    "default": (()=>__TURBOPACK__default__export__)
+});
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$number$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/utils/number.ts [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zustand$2f$esm$2f$react$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/zustand/esm/react.mjs [app-client] (ecmascript)");
+;
+;
+const useGlobalStore = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zustand$2f$esm$2f$react$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["create"])(()=>{
+    const studentIdReal = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$number$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["getRandomID"])();
+    const groupIdReal = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$number$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["getRandomID"])();
+    const productIdReal = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$number$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["getRandomID"])();
+    const cartegorieIdReal = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$number$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["getRandomID"])();
+    const orderIdReal = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$number$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["getRandomID"])();
+    const initialStudents = [
+        {
+            id: studentIdReal,
+            active: true,
+            firstName: "Jaxangir",
+            lastName: "Raxmarullayev",
+            age: 0,
+            gender: "male",
+            group_id: groupIdReal
+        }
+    ];
+    const initialOrders = [
+        {
+            categorieId: cartegorieIdReal,
+            productID: productIdReal,
+            studentID: studentIdReal,
+            id: orderIdReal,
+            name: "Order",
+            coutnt: 2,
+            total_price: 1212,
+            address: "Tashkent",
+            status: "qabul_qilindi"
+        }
+    ];
+    const initialCategories = [
+        {
+            id: cartegorieIdReal,
+            active: true,
+            name: "Categories",
+            productCount: 0
+        }
+    ];
+    const initialProduct = [
+        {
+            id: productIdReal,
+            active: true,
+            name: "Product",
+            price: 0,
+            categorieId: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$number$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["getRandomID"])()
+        }
+    ];
+    const initialGroups = [
+        {
+            id: groupIdReal,
+            name: "guruh 1",
+            isActive: false,
+            studentCount: 0
+        }
+    ];
+    const storedStudents = ("TURBOPACK compile-time truthy", 1) ? JSON.parse(localStorage.getItem("students") || "[]") : ("TURBOPACK unreachable", undefined);
+    const storedGroups = ("TURBOPACK compile-time truthy", 1) ? JSON.parse(localStorage.getItem("groups") || "[]") : ("TURBOPACK unreachable", undefined);
+    const storedCategories = ("TURBOPACK compile-time truthy", 1) ? JSON.parse(localStorage.getItem("categories") || "[]") : ("TURBOPACK unreachable", undefined);
+    const storedProducts = ("TURBOPACK compile-time truthy", 1) ? JSON.parse(localStorage.getItem("products") || "[]") : ("TURBOPACK unreachable", undefined);
+    const storedOrders = ("TURBOPACK compile-time truthy", 1) ? JSON.parse(localStorage.getItem("orders") || "[]") : ("TURBOPACK unreachable", undefined);
+    return {
+        students: storedStudents.length > 0 ? storedStudents : initialStudents,
+        groups: storedGroups.length > 0 ? storedGroups : initialGroups,
+        categories: storedCategories.length > 0 ? storedCategories : initialCategories,
+        products: storedProducts.length > 0 ? storedProducts : initialProduct,
+        orders: storedOrders.length > 0 ? storedOrders : initialOrders,
+        language: "uzbek"
+    };
+});
+const __TURBOPACK__default__export__ = useGlobalStore;
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(module, globalThis.$RefreshHelpers$);
+}
+}}),
+"[project]/src/app/students/edits/DeleteStudents.tsx [app-client] (ecmascript)": ((__turbopack_context__) => {
+"use strict";
+
+var { g: global, __dirname, k: __turbopack_refresh__, m: module } = __turbopack_context__;
+{
+__turbopack_context__.s({
+    "default": (()=>__TURBOPACK__default__export__)
+});
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$store$2f$my$2d$store$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/store/my-store.ts [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$ant$2d$design$2f$icons$2f$es$2f$icons$2f$DeleteFilled$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__DeleteFilled$3e$__ = __turbopack_context__.i("[project]/node_modules/@ant-design/icons/es/icons/DeleteFilled.js [app-client] (ecmascript) <export default as DeleteFilled>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$antd$2f$es$2f$button$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__$3c$export__default__as__Button$3e$__ = __turbopack_context__.i("[project]/node_modules/antd/es/button/index.js [app-client] (ecmascript) <locals> <export default as Button>");
+;
+;
+;
+;
+function DeleteStudents({ studentt }) {
+    function DeleteStudentFn() {
+        const localStudent = JSON.parse(localStorage.getItem("students") || "null");
+        const newStudents = localStudent?.filter((i)=>i.id !== studentt.id);
+        localStorage.setItem("students", JSON.stringify(newStudents));
+        __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$store$2f$my$2d$store$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].setState({
+            students: newStudents
+        });
+    }
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$antd$2f$es$2f$button$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__$3c$export__default__as__Button$3e$__["Button"], {
+            type: "text",
+            color: "danger",
+            variant: "outlined",
+            icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$ant$2d$design$2f$icons$2f$es$2f$icons$2f$DeleteFilled$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__DeleteFilled$3e$__["DeleteFilled"], {}, void 0, false, {
+                fileName: "[project]/src/app/students/edits/DeleteStudents.tsx",
+                lineNumber: 22,
+                columnNumber: 15
+            }, void 0),
+            onClick: DeleteStudentFn
+        }, void 0, false, {
+            fileName: "[project]/src/app/students/edits/DeleteStudents.tsx",
+            lineNumber: 18,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
+        fileName: "[project]/src/app/students/edits/DeleteStudents.tsx",
+        lineNumber: 17,
+        columnNumber: 5
+    }, this);
+}
+_c = DeleteStudents;
+const __TURBOPACK__default__export__ = DeleteStudents;
+var _c;
+__turbopack_context__.k.register(_c, "DeleteStudents");
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(module, globalThis.$RefreshHelpers$);
+}
+}}),
+"[project]/src/app/students/page.tsx [app-client] (ecmascript)": ((__turbopack_context__) => {
+"use strict";
+
+var { g: global, __dirname, k: __turbopack_refresh__, m: module } = __turbopack_context__;
+{
+__turbopack_context__.s({
+    "default": (()=>__TURBOPACK__default__export__)
+});
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$students$2f$edits$2f$DeleteStudents$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/app/students/edits/DeleteStudents.tsx [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$store$2f$my$2d$store$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/store/my-store.ts [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$store$2f$MyAuthState$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/store/MyAuthState.ts [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$antd$2f$es$2f$button$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__$3c$export__default__as__Button$3e$__ = __turbopack_context__.i("[project]/node_modules/antd/es/button/index.js [app-client] (ecmascript) <locals> <export default as Button>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$antd$2f$es$2f$switch$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Switch$3e$__ = __turbopack_context__.i("[project]/node_modules/antd/es/switch/index.js [app-client] (ecmascript) <export default as Switch>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$antd$2f$es$2f$table$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Table$3e$__ = __turbopack_context__.i("[project]/node_modules/antd/es/table/index.js [app-client] (ecmascript) <export default as Table>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/axios/lib/axios.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+;
+var _s = __turbopack_context__.k.signature();
+"use client";
+;
+;
+;
+;
+;
+;
+function SrudentsPage() {
+    _s();
+    const MyAuthState = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$store$2f$MyAuthState$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])();
+    const [user, setUsers] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([]);
+    const [AddOpen, setAddOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [editOpen, setEditOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [EditStudent, setEditStudent] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])({});
+    const [deleteStudent, setDeleteStudent] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])({});
+    const showDrawer = ()=>{
+        setAddOpen(true);
+    };
+    const showDrawerEdit = ()=>{
+        setEditOpen(true);
+    };
+    const onClose = ()=>{
+        setAddOpen(false);
+    };
+    const onCloseEdit = ()=>{
+        setEditOpen(false);
+    };
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "SrudentsPage.useEffect": ()=>{
+            __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].get(`https://nt.softly.uz/api/app/users`, {
+                headers: {
+                    Authorization: `Bearer ${MyAuthState.token}`
+                }
+            }).then({
+                "SrudentsPage.useEffect": (res)=>{
+                    setUsers(res.data);
+                }
+            }["SrudentsPage.useEffect"]).catch({
+                "SrudentsPage.useEffect": (e)=>{
+                    console.log(e);
+                }
+            }["SrudentsPage.useEffect"]).finally({
+                "SrudentsPage.useEffect": ()=>{
+                    console.log("getFinish");
+                }
+            }["SrudentsPage.useEffect"]);
+        }
+    }["SrudentsPage.useEffect"], []);
+    console.log(user);
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: "flex flex-col items-center",
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "flex gap-2 items-center justify-center  ",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$antd$2f$es$2f$button$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__$3c$export__default__as__Button$3e$__["Button"], {
+                    children: [
+                        "Umumiy son: ",
+                        user.length
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/src/app/students/page.tsx",
+                    lineNumber: 61,
+                    columnNumber: 9
+                }, this)
+            }, void 0, false, {
+                fileName: "[project]/src/app/students/page.tsx",
+                lineNumber: 60,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "flex flex-col my-5",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$antd$2f$es$2f$table$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Table$3e$__["Table"], {
+                        columns: [
+                            {
+                                title: "ID",
+                                dataIndex: "id",
+                                render: (id, student, s)=>{
+                                    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: " cursor-pointer ",
+                                        onClick: ()=>{
+                                            setEditOpen(true);
+                                            setEditStudent(student);
+                                        },
+                                        children: id
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/app/students/page.tsx",
+                                        lineNumber: 80,
+                                        columnNumber: 19
+                                    }, void 0);
+                                }
+                            },
+                            {
+                                title: "Ism",
+                                dataIndex: "firstName"
+                            },
+                            {
+                                title: "Familiya",
+                                dataIndex: "lastName"
+                            },
+                            {
+                                title: "Guruh",
+                                dataIndex: "group_id",
+                                render: (group_id)=>{
+                                    const group = state.groups.find((f)=>{
+                                        return f.id === group_id;
+                                    });
+                                    return group?.name;
+                                }
+                            },
+                            {
+                                title: "Jinsi",
+                                dataIndex: "gender",
+                                render: (v, item)=>{
+                                    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        children: v === "male" ? "Erkak" : "Ayol"
+                                    }, item.id, false, {
+                                        fileName: "[project]/src/app/students/page.tsx",
+                                        lineNumber: 115,
+                                        columnNumber: 19
+                                    }, void 0);
+                                }
+                            },
+                            {
+                                title: "Active",
+                                dataIndex: "active",
+                                render: (v, studentt)=>{
+                                    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "flex gap-1 items-center",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$antd$2f$es$2f$switch$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Switch$3e$__["Switch"], {
+                                                checked: v,
+                                                onChange: (checked)=>{
+                                                    const localStudent = JSON.parse(localStorage.getItem("students") || "[]");
+                                                    const new_students = localStudent.map((item)=>{
+                                                        if (item.id === studentt.id) {
+                                                            return {
+                                                                ...item,
+                                                                key: item.id,
+                                                                active: checked
+                                                            };
+                                                        }
+                                                        return item;
+                                                    });
+                                                    localStorage.setItem("students", JSON.stringify(new_students));
+                                                    __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$store$2f$my$2d$store$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].setState({
+                                                        students: new_students
+                                                    });
+                                                }
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/app/students/page.tsx",
+                                                lineNumber: 125,
+                                                columnNumber: 21
+                                            }, void 0),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$students$2f$edits$2f$DeleteStudents$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                                studentt: studentt,
+                                                setDeleteStudent: setDeleteStudent,
+                                                deleteStudent: deleteStudent
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/app/students/page.tsx",
+                                                lineNumber: 150,
+                                                columnNumber: 21
+                                            }, void 0)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/src/app/students/page.tsx",
+                                        lineNumber: 124,
+                                        columnNumber: 19
+                                    }, void 0);
+                                }
+                            }
+                        ],
+                        dataSource: state.students.map((i)=>{
+                            return {
+                                ...i,
+                                key: i.id
+                            };
+                        })
+                    }, void 0, false, {
+                        fileName: "[project]/src/app/students/page.tsx",
+                        lineNumber: 73,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$antd$2f$es$2f$button$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__$3c$export__default__as__Button$3e$__["Button"], {
+                        color: "danger",
+                        type: "text",
+                        variant: "text",
+                        onClick: ()=>{
+                            if (window.confirm("Hammasini o'chirishni tasdiqlaysizmi?")) {
+                                localStorage.clear();
+                                alert("Hammasi o'chirildi!");
+                            }
+                        //ha gptdan oldim windowni
+                        },
+                        children: [
+                            "Hammasini ochirish",
+                            " "
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/src/app/students/page.tsx",
+                        lineNumber: 167,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/src/app/students/page.tsx",
+                lineNumber: 64,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "[project]/src/app/students/page.tsx",
+        lineNumber: 59,
+        columnNumber: 5
+    }, this);
+}
+_s(SrudentsPage, "wEb3tV/+QKJUa4xJncx3RMsBuAM=", false, function() {
+    return [
+        __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$store$2f$MyAuthState$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"]
+    ];
+});
+_c = SrudentsPage;
+const __TURBOPACK__default__export__ = SrudentsPage;
+var _c;
+__turbopack_context__.k.register(_c, "SrudentsPage");
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(module, globalThis.$RefreshHelpers$);
+}
+}}),
+}]);
+
+//# sourceMappingURL=src_6e1f3490._.js.map
